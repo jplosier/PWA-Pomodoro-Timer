@@ -1,4 +1,15 @@
-# PWA-starter
-A basic valid Progressive Web App (PWA) skeleton to use to start a PWA project.
+# PWA-Pomodoro-Timer
+A Progressive Web App (PWA) implementation of the Pomodoro Timer.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/91ef52f1-cb8e-48cd-8aee-74611b0a4f5c/deploy-status)](https://app.netlify.com/sites/jplosier-pwa-starter/deploys)
+https://en.wikipedia.org/wiki/Pomodoro_Technique
+
+https://lifehacker.com/productivity-101-a-primer-to-the-pomodoro-technique-1598992730
+
+
+| Work | Break |
+|:-----:|:-------:|
+| 25| 3-5|
+| 25| 3-5|
+| 25| 3-5|
+| 25| 15-30|
+
