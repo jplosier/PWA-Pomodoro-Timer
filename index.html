@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PWA Starter</title>
+    <title>PWA Pomodoro Timer</title>
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#3367D6"/>
   	<meta name="Description" content="PWA Starter by J-P Losier.">
     <!-- These styles should be the barest minimum to allow the page to initially render without shifting as it loads. -->
     <style media="screen">
       body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #main { background: white; padding: 32px 24px; border-radius: 3px; }
+      #main, #timer { background: white; padding: 32px 24px; border-radius: 3px; }
 	   
       #load { color: black; text-align: center; font-size: 13px; }
      
@@ -21,9 +21,13 @@
   </head>
   <body>
     <div id="main">
-      <h1>PWA Starter by J-P Losier</h1>
-      <p>This is an empty PWA. </p>
-      <p>These are icons: <i class="material-icons">get_app</i> <i class="material-icons">menu</i></p>
+      <h1>PWA Pomodoro Timer</h1>
+      <h2>by J-P Losier</h2>
+      
+    </div>
+    <div id="timer">
+      <span id="timeRemaining">00:00</span>
+      <button id="pause">Start</button>
     </div>
     <p id="load">Loading&hellip;</p>
 

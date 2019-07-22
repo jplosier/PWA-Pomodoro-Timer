@@ -1,11 +1,12 @@
-
 /*** Feature Flags ***/
 const debugLevel = 1;  // 0 - none, 1 - functions, etc....
 const ffTest = false;    // Just testing feature flags
 const ffReload = false;  // Adds a reload icon to the upper-right corner of the page
-const ffLoadData = true;  // Loads settings and data from local storage
+const ffLoadData = false;  // Loads settings and data from local storage
+
 
 /*** utility functions ***/
+
 
 // d() - debug. console log message if debugLevel greater than value specified
 function d(level, message){
@@ -31,6 +32,7 @@ function makeReloadButton(){
 };   //  makeReloadButton();
 
 
+// loadItem() - returns the value stored in a key into a field value
 function loadItem(key) {
   d(1, 'loadItem();  // start');
   localforage.getItem(key).then(function(result){
@@ -43,18 +45,15 @@ function loadItem(key) {
 };  // loadItem();
 
 
+// loadData() - the initialization process to get stored data and put it into proper values or fields.
 function loadData() {
   d(1, 'loadData();  // start');
-  // ship_rate, hand_fee, tax_rate, comm_rate
-  loadItem('ship_rate');
-  loadItem('hand_fee');
-  loadItem('tax_rate');
-  loadItem('comm_rate');
-  
+    
   d(1, 'loadData();  // end');
 };  // loadData()
 
 
+// saveItem() - saves the value of a field into local storage.
 function saveItem(key) {
   d(1, 'saveItem("' + key + '");  // start');
   
@@ -71,19 +70,19 @@ function saveItem(key) {
 };  // saveItem()
 
 
+// saveData() - The finalization or synchronization to store local field values into locl storage.
 function saveData() {
   d(1, 'saveData();  // start');
-  // ship_rate, hand_fee, tax_rate, comm_rate
-  saveItem('ship_rate');
-  saveItem('hand_fee');
-  saveItem('tax_rate');
-  saveItem('comm_rate');
+  
+  
   d(1, 'saveData();  // end');
 };  // saveData()
 
 
 
 /*** Application Functions ***/
+
+
 /******************** MAIN() ********************/
 function main(){
   d(1, 'main();  // start');
@@ -95,5 +94,6 @@ function main(){
 
   d(1, 'main();  // end');
 };   //  main();
+
 
 main();
